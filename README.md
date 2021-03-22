@@ -6,6 +6,7 @@ The app makes requests to [OpenWeatherApi](https://openweathermap.org/current) a
 ## Screenshots
 -----------
 
+### Portrait
 <table width="100%">
   <tr>
     <th width="25%"><img src="https://github.com/Calleb-Miquissene/Wit-Android-Challenge/blob/main/screenshots/Screenshot_20210322-225235_Wit-Android-Challenge_framed.png"</th>
@@ -14,6 +15,15 @@ The app makes requests to [OpenWeatherApi](https://openweathermap.org/current) a
     <th width="25%"><img src="https://github.com/Calleb-Miquissene/Wit-Android-Challenge/blob/main/screenshots/Screenshot_20210322-225226_Wit-Android-Challenge_framed.png"</th>
   </tr>
 </table>
+
+### Landscape
+<table width="100%">
+  <tr>
+    <th width="25%"><img src="https://github.com/Calleb-Miquissene/Wit-Android-Challenge/blob/main/screenshots/Landscape/Screenshot_20210323-012210_Wit-Android-Challenge_framed.png"</th>
+    <th width="25%"><img src="https://github.com/Calleb-Miquissene/Wit-Android-Challenge/blob/main/screenshots/Landscape/Screenshot_20210323-012220_Wit-Android-Challenge_framed.png"</th>
+  </tr>
+</table>
+
 
 Libraries Used
 --------------
