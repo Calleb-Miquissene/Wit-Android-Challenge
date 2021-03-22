@@ -105,15 +105,6 @@
                 android:textStyle="bold"
                 tools:text="Maputo, Mz" />
 
-            <ImageView
-                android:layout_width="@dimen/_24sdp"
-                android:layout_height="@dimen/_24sdp"
-                android:layout_marginEnd="@dimen/_8sdp"
-                android:contentDescription="@string/app_name"
-                android:padding="@dimen/_2sdp"
-                app:tint="@color/colorTextIcons" />
-
-
         </LinearLayout>
 
         <ScrollView
@@ -197,12 +188,12 @@
 
                     <ImageView
                         android:id="@+id/imageView"
+                        weather_icon="@{weatherIcon}"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        weather_icon="@{weatherIcon}"
                         android:contentDescription="@string/app_name"
-                        app:layout_constraintTop_toTopOf="@id/linearLayout"
                         app:layout_constraintStart_toStartOf="@id/linearLayout"
+                        app:layout_constraintTop_toTopOf="@id/linearLayout"
                         tools:src="@drawable/icon_clouds" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -248,7 +239,7 @@
                                 android:layout_height="wrap_content"
                                 android:ellipsize="end"
                                 android:maxLines="2"
-                                android:text="Minimum temperature"
+                                android:text="@string/minimum_temperature"
                                 android:textAlignment="center"
                                 android:textColor="@color/white" />
 
@@ -288,7 +279,7 @@
                                 android:layout_height="wrap_content"
                                 android:ellipsize="end"
                                 android:maxLines="2"
-                                android:text="Maximum Temperature"
+                                android:text="@string/maximum_temperature"
                                 android:textAlignment="center"
                                 android:textColor="@color/white" />
 
@@ -329,12 +320,11 @@
                                 android:layout_height="wrap_content"
                                 android:ellipsize="end"
                                 android:maxLines="2"
-                                android:text="Temperature feels like"
+                                android:text="@string/temperature_feels_like"
                                 android:textAlignment="center"
                                 android:textColor="@color/white" />
 
                         </LinearLayout>
-
 
                     </androidx.cardview.widget.CardView>
 
@@ -371,7 +361,6 @@
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/_12ssp"
                             tools:text="Wind: 16 km/h" />
-
                     </LinearLayout>
 
                     <LinearLayout

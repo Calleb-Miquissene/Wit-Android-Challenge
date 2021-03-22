@@ -1,12 +1,11 @@
 package com.callebdev.wit_android_challenge.utils
 
-const val API_KEY = "5b2482c1382f4f2c68c8f817ac76eb2d"
+const val API_KEY = "PLACE_YOUR_API_KEY_HERE"
 const val BASE_URL = "https://api.openweathermap.org/data/2.5/"
 
 const val INTENT_WEATHER_RESULT = "weather_result"
 
 const val UNITS_METRIC = "metric"
-const val UNITS_IMPERIAL = "imperial"
 
 const val LISBON = "2267057"
 const val MADRID = "3117735"

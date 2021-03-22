@@ -1,7 +1,6 @@
 package com.callebdev.wit_android_challenge.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.callebdev.wit_android_challenge.databinding.CityItemBinding

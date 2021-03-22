@@ -1,24 +1,17 @@
 package com.callebdev.wit_android_challenge.activities
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.callebdev.wit_android_challenge.R
 import com.callebdev.wit_android_challenge.databinding.ActivityWeatherDetailsBinding
-import com.callebdev.wit_android_challenge.network.ApiClient
-import com.callebdev.wit_android_challenge.network.ApiHelper
 import com.callebdev.wit_android_challenge.repositories.WeatherRepository
 import com.callebdev.wit_android_challenge.responses.WeatherResponse
-import com.callebdev.wit_android_challenge.results.WeatherResult
 import com.callebdev.wit_android_challenge.utils.INTENT_WEATHER_RESULT
 import com.callebdev.wit_android_challenge.utils.Status
-import com.callebdev.wit_android_challenge.viewmodels.MainActivityViewModel
-import com.callebdev.wit_android_challenge.viewmodels.MainActivityViewModelFactory
 import com.callebdev.wit_android_challenge.viewmodels.WeatherDetailsActivityViewModel
 import com.callebdev.wit_android_challenge.viewmodels.WeatherDetailsActivityViewModelFactory
 import dagger.hilt.android.AndroidEntryPoint
@@ -31,7 +24,8 @@ class WeatherDetailsActivity : AppCompatActivity() {
     private lateinit var cityId: String
     private lateinit var mViewModel: WeatherDetailsActivityViewModel
     private lateinit var binding: ActivityWeatherDetailsBinding
-    @Inject lateinit var weatherRepository: WeatherRepository
+    @Inject
+    lateinit var weatherRepository: WeatherRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,8 +40,8 @@ class WeatherDetailsActivity : AppCompatActivity() {
 
     private fun setupViewModel() {
         mViewModel = ViewModelProviders.of(
-                this,
-                WeatherDetailsActivityViewModelFactory(weatherRepository)
+            this,
+            WeatherDetailsActivityViewModelFactory(weatherRepository)
         ).get(WeatherDetailsActivityViewModel::class.java)
     }
 
@@ -63,7 +57,7 @@ class WeatherDetailsActivity : AppCompatActivity() {
                 when (it.status) {
                     Status.SUCCESS -> {
                         binding.isLoading = false
-                        it.data?.let {  weatherResponse ->
+                        it.data?.let { weatherResponse ->
                             retrieveWeatherDetails(weatherResponse)
                         }
                         binding.layoutWeatherData.visibility = View.VISIBLE

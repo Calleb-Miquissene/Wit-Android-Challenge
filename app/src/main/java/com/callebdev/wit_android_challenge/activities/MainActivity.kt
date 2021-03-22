@@ -13,9 +13,6 @@ import com.callebdev.wit_android_challenge.R
 import com.callebdev.wit_android_challenge.adapters.CityAdapter
 import com.callebdev.wit_android_challenge.databinding.ActivityMainBinding
 import com.callebdev.wit_android_challenge.listeners.CityListener
-import com.callebdev.wit_android_challenge.models.Weather
-import com.callebdev.wit_android_challenge.network.ApiClient
-import com.callebdev.wit_android_challenge.network.ApiHelper
 import com.callebdev.wit_android_challenge.repositories.WeatherRepository
 import com.callebdev.wit_android_challenge.responses.WeatherDetailsResponse
 import com.callebdev.wit_android_challenge.results.WeatherResult
@@ -32,7 +29,9 @@ class MainActivity : AppCompatActivity(), CityListener {
     private lateinit var binding: ActivityMainBinding
     private lateinit var cityAdapter: CityAdapter
     private lateinit var mViewModel: MainActivityViewModel
-    @Inject lateinit var weatherRepository: WeatherRepository
+
+    @Inject
+    lateinit var weatherRepository: WeatherRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,13 +51,12 @@ class MainActivity : AppCompatActivity(), CityListener {
 
     private fun setupViewModel() {
         mViewModel = ViewModelProviders.of(
-                this,
-                MainActivityViewModelFactory(weatherRepository)
+            this,
+            MainActivityViewModelFactory(weatherRepository)
         ).get(MainActivityViewModel::class.java)
     }
 
     private fun setUpObservers() {
-
         mViewModel.getMyCityWeather().observe(this, Observer {
             it?.let { r ->
                 when (r.status) {

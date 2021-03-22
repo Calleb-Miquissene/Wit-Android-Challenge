@@ -21,5 +21,4 @@ data class WeatherResult(
     @SerializedName("cod") val cod: Int
 ) : Parcelable {
     val cityAndCountry: String get() = "$name, ${sys.country}"
-    val weatherIconUrl: String get() = weather[0].icon
 }

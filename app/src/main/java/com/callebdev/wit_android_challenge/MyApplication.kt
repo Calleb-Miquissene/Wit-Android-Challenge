@@ -7,6 +7,6 @@ import com.callebdev.wit_android_challenge.repositories.WeatherRepository
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class MyApplication: Application() {
+class MyApplication : Application() {
     val weatherRepository = WeatherRepository(ApiHelper(ApiClient.apiService()))
 }

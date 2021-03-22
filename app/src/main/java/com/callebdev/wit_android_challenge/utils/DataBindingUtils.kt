@@ -35,7 +35,8 @@ fun TextView.setTemperature(temperature: Double?) {
 fun TextView.setDateAndTime(dt: Int?) {
     dt?.let {
         val date = Date(dt.toLong() * 1000)
-        val dateAndTimeFormatted = SimpleDateFormat("EEEE, dd MMMM yyyy, HH:mm", Locale.getDefault())
+        val dateAndTimeFormatted =
+            SimpleDateFormat("EEEE, dd MMMM yyyy, HH:mm", Locale.getDefault())
         text = dateAndTimeFormatted.format(date)
     }
 }
@@ -45,7 +46,10 @@ fun TextView.setSunrise(dt: Int?) {
     dt?.let {
         val date = Date(dt.toLong() * 1000)
         val dateAndTimeFormatted = SimpleDateFormat("HH:mm", Locale.getDefault())
-        text = String.format("%s ${dateAndTimeFormatted.format(date)}", context.getString(R.string.text_sunrise))
+        text = String.format(
+            "%s ${dateAndTimeFormatted.format(date)}",
+            context.getString(R.string.text_sunrise)
+        )
     }
 }
 
@@ -54,7 +58,10 @@ fun TextView.setSunset(dt: Int?) {
     dt?.let {
         val date = Date(dt.toLong() * 1000)
         val dateAndTimeFormatted = SimpleDateFormat("HH:mm", Locale.getDefault())
-        text = String.format("%s ${dateAndTimeFormatted.format(date)}", context.getString(R.string.text_sunset))
+        text = String.format(
+            "%s ${dateAndTimeFormatted.format(date)}",
+            context.getString(R.string.text_sunset)
+        )
     }
 }
 

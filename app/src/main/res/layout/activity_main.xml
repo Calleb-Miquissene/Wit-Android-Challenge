@@ -66,28 +66,12 @@
                 android:layout_marginEnd="@dimen/_8sdp"
                 android:layout_weight="1"
                 android:ellipsize="end"
-                android:textStyle="bold"
                 android:includeFontPadding="false"
                 android:maxLines="1"
                 android:text="@string/app_name"
                 android:textColor="@color/colorTextIcons"
-                android:textSize="@dimen/_14ssp" />
-
-            <ImageView
-                android:layout_width="@dimen/_24sdp"
-                android:layout_height="@dimen/_24sdp"
-                android:layout_marginEnd="@dimen/_8sdp"
-                android:contentDescription="@string/app_name"
-                android:padding="@dimen/_2sdp"
-                app:tint="@color/colorTextIcons" />
-
-            <ImageView
-                android:layout_width="@dimen/_24sdp"
-                android:layout_height="@dimen/_24sdp"
-                android:layout_marginEnd="@dimen/_8sdp"
-                android:contentDescription="@string/app_name"
-                android:padding="@dimen/_2sdp"
-                app:tint="@color/colorTextIcons" />
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -128,12 +112,12 @@
                         tools:text="Maputo, MZ" />
 
                     <TextView
+                        date_and_time="@{myCityDateAndTime}"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         android:textColor="@color/colorTextPermanentWhite"
                         android:textSize="@dimen/_12ssp"
-                        date_and_time="@{myCityDateAndTime}"
                         tools:text="Saturday, 20 March 2021, 09:44" />
                 </LinearLayout>
 
@@ -152,9 +136,9 @@
                         android:padding="@dimen/_10sdp">
 
                         <ImageView
+                            weather_icon="@{myCityWeatherIcon}"
                             android:layout_width="@dimen/_50sdp"
                             android:layout_height="@dimen/_50sdp"
-                            weather_icon="@{myCityWeatherIcon}"
                             android:contentDescription="@string/app_name"
                             tools:src="@drawable/icon_clouds" />
 
@@ -172,22 +156,22 @@
                             tools:text="Heavy Rain" />
 
                         <TextView
+                            humidity="@{myCityHumidity}"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:ellipsize="end"
                             android:includeFontPadding="false"
                             android:maxLines="1"
-                            humidity="@{myCityHumidity}"
                             android:textColor="@color/colorTextPermanentWhite"
                             tools:text="Humidity: 55%" />
 
                         <TextView
+                            wind="@{myCityWind}"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:ellipsize="end"
                             android:includeFontPadding="false"
                             android:maxLines="1"
-                            wind="@{myCityWind}"
                             android:textColor="@color/colorTextPermanentWhite"
                             tools:text="Wind: 3.11 km/h" />
 
@@ -201,12 +185,12 @@
                         android:padding="@dimen/_10sdp">
 
                         <TextView
+                            temperature="@{myCityTemperature}"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:ellipsize="end"
                             android:includeFontPadding="false"
                             android:maxLines="1"
-                            temperature="@{myCityTemperature}"
                             android:textAlignment="viewEnd"
                             android:textColor="@color/colorTextPermanentWhite"
                             android:textSize="@dimen/_70ssp"

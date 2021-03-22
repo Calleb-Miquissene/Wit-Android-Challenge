@@ -8,15 +8,15 @@ import retrofit2.http.Query
 interface ApiService {
     @GET("group")
     suspend fun getWeatherByCityId(
-            @Query("id") cityId: String,
-            @Query("appid") clientApiKey: String,
-            @Query("units") units: String
+        @Query("id") cityId: String,
+        @Query("appid") clientApiKey: String,
+        @Query("units") units: String
     ): WeatherResponse
 
     @GET("weather")
     suspend fun getWeatherByCityName(
-            @Query("q") cityName: String,
-            @Query("appid") clientApiKey: String,
-            @Query("units") units: String
+        @Query("q") cityName: String,
+        @Query("appid") clientApiKey: String,
+        @Query("units") units: String
     ): WeatherDetailsResponse
 }
