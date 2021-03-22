@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Wit-Android-Challenge</string>
+    <string name="text_wind">Wind:</string>
+    <string name="text_humidity">Humidity:</string>
+    <string name="text_pressure">Pressure:</string>
+    <string name="text_sunset">Sunset:</string>
+    <string name="text_sunrise">Sunrise:</string>
+</resources>
