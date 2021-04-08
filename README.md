@@ -1,6 +1,6 @@
 # Wit-Android-Challenge
 
-This repository contains the source code of android application developed as a requirement for the application for Android Developer (Africa) at Wit-Software.
+This repository contains the source code of an android application developed as a requirement for the application for Android Developer (Africa) at Wit-Software.
 The app makes requests to [OpenWeatherApi](https://openweathermap.org/current) and parses its Json response to get the weather of my city  `Maputo` and 10 European cities `Lisbon, Madrid, Paris, Berlin, Copenhagen, Rome, London, Dublin, Prague and Vienna`.
 
 ## Screenshots
